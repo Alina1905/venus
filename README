@@ -1,20 +1,30 @@
-Planet
-------
+Planet Venus – Feed Aggregator:
+Planet Venus is a powerful and flexible “river of news” feed reader and aggregator.
+It fetches news feeds (RSS, Atom, RDF, CDF) from multiple websites, merges them, and produces a single unified feed — latest updates first.
 
-Planet is a flexible feed aggregator. It downloads news feeds published by
-web sites and aggregates their content together into a single combined feed,
-latest news first.  This version of Planet is named Venus as it is the
-second major version.  The first version is still in wide use and is
-also actively being maintained.
+Features:
+Aggregates multiple feed formats: RSS, Atom, RDF, CDF
+Cleans and corrects malformed markup using BeautifulSoup
+Generates static output with customizable templates via XSLT or templating engines
+Produces a “river of news” format — ideal for community news portals or blog aggregators
+Lightweight and easy to configure
 
-It uses Mark Pilgrim's Universal Feed Parser to read from CDF, RDF, RSS and
-Atom feeds; Leonard Richardson's Beautiful Soup to correct markup issues;
-and either Tomas Styblo's templating engine or Daniel Viellard's implementation
-of XSLT to output static files in any format you can dream up.
+Planet Venus uses:
+Universal Feed Parser – for parsing diverse feed formats
+BeautifulSoup – for handling invalid HTML/XML
+XSLT / Custom Templates – for flexible output generation
 
-To get started, check out the documentation in the docs directory.  If you have
-any questions or comments, please don't hesitate to use the planet mailing list:
+Install dependencies:
+pip install feedparser beautifulsoup4
 
-  http://lists.planetplanet.org/mailman/listinfo/devel
+Installation
+Clone the repository:
+git clone https://github.com/gentoo/venus.git
+cd venus
 
-Keywords: feed, blog, aggregator, RSS, RDF, Atom, OPML, Python
+View the documentation:
+open docs/index.html
+
+Create a configuration file:
+cp examples/config.ini myplanet.ini
+Your aggregated feed will be generated in the output directory you specified.
